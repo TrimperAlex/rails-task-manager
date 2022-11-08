@@ -20,6 +20,11 @@ class TasksController < ApplicationController
   def edit
   end
 
+  def update
+    @task.update(task_params)
+    redirect_to tasks_path
+  end
+
   private
 
   def task_params
